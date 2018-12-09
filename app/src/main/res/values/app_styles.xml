@@ -20,6 +20,7 @@
     </style>
 
     <style name="AppTheme.Splash" parent="AppTheme">
+        <item name="android:windowBackground">@color/primary</item>
     </style>
 
     <style name="Widget.AppTheme.Dialog" parent="Theme.MaterialComponents.Dialog.Alert">

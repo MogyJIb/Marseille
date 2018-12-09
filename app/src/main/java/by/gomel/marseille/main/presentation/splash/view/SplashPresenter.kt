@@ -1,5 +1,6 @@
 package by.gomel.marseille.main.presentation.splash.view
 
+import by.gomel.marseille.R
 import by.gomel.marseille.base.view.BaseContract
 import by.gomel.marseille.base.view.BasePresenter
 import by.gomel.marseille.main.data.repository.IRepository
@@ -17,7 +18,7 @@ class SplashPresenter(
         disposables += Observable.just(Unit).delay(3, TimeUnit.SECONDS)
                 .async()
                 .subscribeBy {
-                    //view?.router()?.navigate(R.id.action_splash_fragment_to_song_activity)
+                    view?.router()?.navigate(R.id.action_splash_fragment_to_main_activity)
                 }
     }
 }

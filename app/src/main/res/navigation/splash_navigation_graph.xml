@@ -18,9 +18,11 @@
         >
 
         <action
-            android:id="@+id/action_splash_fragment_to_song_activity"
+            android:id="@+id/action_splash_fragment_to_main_activity"
             app:destination="@id/main_activity"
-            app:popUpTo="@+id/main_activity" />
+            app:popUpTo="@+id/main_activity"
+            />
+
     </fragment>
 
     <activity

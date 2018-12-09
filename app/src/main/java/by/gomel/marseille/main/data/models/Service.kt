@@ -26,13 +26,15 @@ data class Service (
     val uid: String = UUID.randomUUID().toString()
 ): Serializable
 
-enum class ServiceCategory {
-    HAIR,
-    MANICURE,
-    PEDICURE,
-    MAKE_UP,
-    MAGIC_WHITE,
-    TOOL_SHARPENING
+enum class ServiceCategory(
+        val title: String
+) {
+    HAIR("Hair"),
+    MANICURE("Manicure"),
+    PEDICURE("Pedicure"),
+    MAKE_UP("Make up"),
+    MAGIC_WHITE("Magic white"),
+    TOOL_SHARPENING("Tool sharpening")
 }
 
 class ServiceCategoryTypeConverter {

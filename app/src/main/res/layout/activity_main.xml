@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
-
-<!--
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,26 +6,10 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
+    android:background="@color/background"
 
-    tools:context=".main.presentation.songs.SongActivity"
+    tools:context=".main.presentation.MainActivity"
     >
-
-        <FrameLayout
-            android:id="@+id/top_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/_16dp"
-            >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_50dp"
-                    android:src="@drawable/guitar_notes_white"
-                    android:scaleType="fitStart"
-                    />
-
-        </FrameLayout>
 
         <fragment
             android:id="@+id/song_nav_host_fragment"
@@ -40,7 +19,7 @@
             android:name="androidx.navigation.fragment.NavHostFragment"
 
             app:defaultNavHost="true"
-            app:navGraph="@navigation/song_navigation_graph"
+            app:navGraph="@navigation/main_navigation_graph"
             />
 
         <com.google.android.material.bottomappbar.BottomAppBar
@@ -54,7 +33,7 @@
 
             app:hideOnScroll="false"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:fabAlignmentMode="center"
+            app:fabAlignmentMode="end"
             app:navigationIcon="@drawable/outline_menu_white_24"
             />
 
@@ -62,11 +41,9 @@
             android:id="@+id/bottom_app_bar_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/outline_shopping_cart_white_24"
 
             app:layout_anchor="@id/bottom_app_bar"
-
-            tools:src="@drawable/outline_add_white_24"
             />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
--->
