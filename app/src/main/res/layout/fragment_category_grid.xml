@@ -6,23 +6,9 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/_16dp"
     android:background="@color/background"
     android:orientation="vertical"
     >
-
-    <TextView
-        android:id="@+id/category_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/_32dp"
-        android:paddingBottom="@dimen/_4dp"
-        android:paddingTop="@dimen/_8dp"
-        android:text="Услуги"
-        android:textSize="@dimen/_20sp"
-        android:textColor="@color/text_primary_inverse"
-        android:background="@color/primary"
-        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/category_recycler_view"
@@ -30,7 +16,7 @@
         android:layout_height="wrap_content"
         android:overScrollMode="never"
         android:scrollbars="none"
-        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:paddingTop="@dimen/_8dp"
         android:paddingRight="@dimen/_4dp"
         android:paddingLeft="@dimen/_4dp"
@@ -44,11 +30,5 @@
         tools:listItem="@layout/service_category_grid_item"
         />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/primary"
-        android:paddingBottom="@dimen/_80dp"
-        />
 
 </LinearLayout>

@@ -4,7 +4,7 @@ import androidx.core.os.bundleOf
 import by.gomel.marseille.R
 import by.gomel.marseille.base.view.BasePresenter
 import by.gomel.marseille.main.data.models.ServiceCategory
-import by.gomel.marseille.main.domain.GetServiceCategoriesUseCase
+import by.gomel.marseille.main.domain.service.GetServiceCategoriesUseCase
 import io.reactivex.rxkotlin.plusAssign
 
 

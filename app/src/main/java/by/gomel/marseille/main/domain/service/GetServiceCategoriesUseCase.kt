@@ -1,4 +1,4 @@
-package by.gomel.marseille.main.domain
+package by.gomel.marseille.main.domain.service
 
 import by.gomel.marseille.main.data.models.ServiceCategory
 import by.gomel.marseille.main.data.repository.IRepository
@@ -8,7 +8,7 @@ import io.reactivex.Observable
 class GetServiceCategoriesUseCase(
         private val repository: IRepository
 ) {
-    fun getCategoriesFilteredByName(): Observable<List<ServiceCategory>>
+    fun getCategoriesFilteredByNameAsync(): Observable<List<ServiceCategory>>
             = repository.services().categories()
                     .flatMap { list ->
                         Observable.fromIterable(list)
@@ -17,7 +17,5 @@ class GetServiceCategoriesUseCase(
                                 .toObservable()
                     }
                     .onErrorReturn { emptyList() }
-
-    fun getCategoriesFilteredByNameAsync(): Observable<List<ServiceCategory>>
-            = getCategoriesFilteredByName().async()
+                    .async()
 }

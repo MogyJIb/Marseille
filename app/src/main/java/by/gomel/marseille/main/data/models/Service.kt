@@ -24,7 +24,12 @@ data class Service (
     @ColumnInfo(name = "uid")
     @PrimaryKey
     val uid: String = UUID.randomUUID().toString()
-): Serializable
+): Serializable {
+    val price: String
+        get() = (if (minPrice < 0) "" else "$minPrice - ") + "$maxPrice Р"
+}
+
+
 
 enum class ServiceCategory(
         val title: String
@@ -36,6 +41,7 @@ enum class ServiceCategory(
     MAGIC_WHITE("Magic white"),
     TOOL_SHARPENING("Tool sharpening")
 }
+
 
 class ServiceCategoryTypeConverter {
     @TypeConverter

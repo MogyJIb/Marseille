@@ -14,8 +14,8 @@ class ServiceRepository(
     fun get(vararg serviceIds: String): Observable<List<Service>>
             = Observable.fromCallable { serviceDao.get(*serviceIds) }
 
-    fun findByCategory(category: ServiceCategory): Observable<List<Service>>
-            = Observable.fromCallable { serviceDao.findByCategory(category) }
+    fun get(category: ServiceCategory): Observable<List<Service>>
+            = Observable.fromCallable { serviceDao.get(category) }
 
     fun add(vararg services: Service): Observable<Unit> = Observable.fromCallable { serviceDao.insert(*services) }
 

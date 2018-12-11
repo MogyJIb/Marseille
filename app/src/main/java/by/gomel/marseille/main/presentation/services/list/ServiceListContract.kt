@@ -6,7 +6,7 @@ import by.gomel.marseille.main.data.models.ServiceCategory
 
 interface ServiceListContract {
     interface View : BaseContract.View {
-        fun updateServices(service: List<Service>)
+        fun updateServices(services: List<Service>)
     }
 
     interface Presenter : BaseContract.Presenter {

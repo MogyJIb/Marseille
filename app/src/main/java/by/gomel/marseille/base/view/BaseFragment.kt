@@ -1,5 +1,7 @@
 package by.gomel.marseille.base.view
 
+import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import by.gomel.marseille.utils.extentions.findNavController
 import by.gomel.marseille.utils.extentions.hideKeyboard
@@ -13,14 +15,22 @@ abstract class BaseFragment: Fragment(), BaseContract.View {
     override fun context() = context
             ?: throw NullPointerException("Class ${this.javaClass.simpleName} context is null")
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        presenter?.bind(this)
+    }
+
+    override fun onDestroyView() {
+        presenter?.unbind()
+        super.onDestroyView()
+    }
+
     override fun onResume() {
         super.onResume()
-        presenter?.bind(this)
         javaClass.log("onResume")
     }
 
     override fun onPause() {
-        presenter?.unbind()
         activity?.hideKeyboard()
         super.onPause()
         javaClass.log("onPause")

@@ -14,7 +14,7 @@ interface ServiceDao {
     fun get(vararg serviceIds: String): List<Service>
 
     @Query("SELECT * FROM services WHERE category LIKE :category")
-    fun findByCategory(category: ServiceCategory): List<Service>
+    fun get(category: ServiceCategory): List<Service>
 
     @Insert
     fun insert(vararg services: Service)

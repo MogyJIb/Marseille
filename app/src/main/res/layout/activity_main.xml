@@ -11,10 +11,25 @@
     tools:context=".main.presentation.MainActivity"
     >
 
+        <TextView
+            android:id="@+id/category_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16dp"
+            android:paddingLeft="@dimen/_32dp"
+            android:paddingBottom="@dimen/_4dp"
+            android:paddingTop="@dimen/_8dp"
+            android:text="Услуги"
+            android:textSize="@dimen/_20sp"
+            android:textColor="@color/text_primary_inverse"
+            android:background="@color/primary"
+            />
+
         <fragment
             android:id="@+id/song_nav_host_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_64dp"
             android:name="androidx.navigation.fragment.NavHostFragment"
 
             app:defaultNavHost="true"
@@ -32,7 +47,7 @@
 
             app:hideOnScroll="false"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:fabAlignmentMode="end"
+            app:fabAlignmentMode="center"
             app:navigationIcon="@drawable/outline_menu_white_24"
             />
 
