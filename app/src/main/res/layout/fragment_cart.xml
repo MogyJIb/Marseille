@@ -25,7 +25,7 @@
             android:padding="@dimen/_8dp"
             android:textColor="@color/text_primary_inverse"
             android:textSize="@dimen/_16sp"
-            android:text="Total amount:  "
+            android:text="Общая стоимость:  "
             />
 
         <TextView

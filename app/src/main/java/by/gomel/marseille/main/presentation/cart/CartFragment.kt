@@ -1,5 +1,6 @@
 package by.gomel.marseille.main.presentation.cart
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import by.gomel.marseille.R
 import by.gomel.marseille.main.data.models.Service
 import by.gomel.marseille.main.presentation.BaseMainFragment
+import by.gomel.marseille.main.presentation.InfoDialog
 import by.gomel.marseille.utils.extentions.hide
 import by.gomel.marseille.utils.extentions.show
 import com.google.android.material.bottomappbar.BottomAppBar
@@ -50,7 +52,16 @@ class CartFragment : BaseMainFragment(), CartContract.View {
         bottomBar().setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.action_delete -> {
-                    presenter.onDeleteButtonClicked()
+                    InfoDialog.newInstance(
+                            title = "Очистка корзины",
+                            message = "Вы действительно хотите очистить корзину?",
+                            leftButtonCaption = getString(R.string.cancel),
+                            rightButtonCaption = getString(R.string.resume)
+                    ).apply {
+                        rightButtonListener = DialogInterface.OnClickListener { _, _ ->
+                            presenter.onDeleteButtonClicked()
+                        }
+                    }.show(fragmentManager, InfoDialog::class.java.simpleName)
                     true
                 }
                 else -> false
