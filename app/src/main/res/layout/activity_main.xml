@@ -55,7 +55,6 @@
             android:id="@+id/bottom_app_bar_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/outline_shopping_cart_white_24"
 
             app:layout_anchor="@id/bottom_app_bar"
             />

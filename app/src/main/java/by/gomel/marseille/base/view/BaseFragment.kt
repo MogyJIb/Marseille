@@ -2,6 +2,7 @@ package by.gomel.marseille.base.view
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import by.gomel.marseille.utils.extentions.findNavController
 import by.gomel.marseille.utils.extentions.hideKeyboard
@@ -14,6 +15,8 @@ abstract class BaseFragment: Fragment(), BaseContract.View {
 
     override fun context() = context
             ?: throw NullPointerException("Class ${this.javaClass.simpleName} context is null")
+
+    override fun toast(text: String) = Toast.makeText(context, text, Toast.LENGTH_LONG).show()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

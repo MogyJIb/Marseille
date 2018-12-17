@@ -2,11 +2,14 @@ package by.gomel.marseille.base.view
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import by.gomel.marseille.utils.extentions.log
 
 abstract class BaseActivity : AppCompatActivity(), BaseContract.View {
     override fun context() = this
+
+    override fun toast(text: String) = Toast.makeText(this, text, Toast.LENGTH_LONG).show()
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)

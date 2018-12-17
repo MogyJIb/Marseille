@@ -14,4 +14,5 @@ abstract class BaseMainFragment : BaseFragment() {
 
     fun bottomBar(): BottomAppBar = (activity as MainActivity).bottomBar()
     fun bottomBarButton(): FloatingActionButton = (activity as MainActivity).bottomBarButton()
+    fun setTitle(title: String) = (activity as MainActivity).setTitle(title)
 }

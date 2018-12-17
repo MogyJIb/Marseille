@@ -11,7 +11,6 @@
     android:layout_marginBottom="@dimen/_24dp"
     android:layout_marginTop="@dimen/_24dp"
     android:orientation="horizontal"
-    android:foreground="?attr/selectableItemBackground"
     >
 
     <TextView
@@ -36,18 +35,6 @@
 
         tools:text="200 $"
         />
-
-    <ImageButton
-        android:id="@+id/button_add_purchase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/_24dp"
-        android:background="@drawable/background_add_to_purchase"
-        android:gravity="center"
-        android:padding="@dimen/_8dp"
-        android:src="@drawable/outline_add_white_18"
-        android:textColor="@color/text_primary_inverse"
-        android:textSize="@dimen/_32sp" />
 
     <TextView
         android:id="@+id/service_description"

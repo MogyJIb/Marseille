@@ -26,7 +26,7 @@ data class Service (
     val uid: String = UUID.randomUUID().toString()
 ): Serializable {
     val price: String
-        get() = (if (minPrice < 0) "" else "$minPrice - ") + "$maxPrice Р"
+        get() = "$minPrice" + (if (maxPrice < 0) "" else " - $maxPrice") + " P"
 }
 
 

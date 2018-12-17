@@ -23,6 +23,7 @@ interface BaseContract {
      */
     interface View : Router {
         fun context(): Context
+        fun toast(text: String)
     }
 
     /**

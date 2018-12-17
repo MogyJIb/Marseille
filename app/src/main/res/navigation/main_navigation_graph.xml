@@ -23,6 +23,12 @@
             app:destination="@id/services_list_fragment"
             />
 
+        <action
+            android:id="@+id/action_to_cart"
+
+            app:destination="@id/cart_fragment"
+            />
+
     </fragment>
 
     <fragment
@@ -31,6 +37,22 @@
         android:label="fragment_service_list"
 
         tools:layout="@layout/fragment_service_list"
+        >
+
+        <action
+            android:id="@+id/action_to_cart"
+
+            app:destination="@id/cart_fragment"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cart_fragment"
+        android:name="by.gomel.marseille.main.presentation.cart.CartFragment"
+        android:label="fragment_cart"
+
+        tools:layout="@layout/fragment_cart"
         />
 
 </navigation>
