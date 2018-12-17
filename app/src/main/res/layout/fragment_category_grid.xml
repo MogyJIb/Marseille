@@ -13,14 +13,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/category_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:overScrollMode="never"
         android:scrollbars="none"
-        android:layout_marginTop="@dimen/_8dp"
-        android:paddingTop="@dimen/_8dp"
+        android:paddingTop="@dimen/_16dp"
         android:paddingRight="@dimen/_4dp"
         android:paddingLeft="@dimen/_4dp"
-        android:paddingBottom="@dimen/_16dp"
         android:clipToPadding="false"
         android:background="@android:color/transparent"
 
@@ -30,5 +29,11 @@
         tools:listItem="@layout/service_category_grid_item"
         />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4dp"
+        android:background="@color/primary"
+        android:layout_marginBottom="@dimen/_90dp"
+        />
 
 </LinearLayout>

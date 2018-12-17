@@ -11,25 +11,32 @@
     tools:context=".main.presentation.MainActivity"
     >
 
-        <TextView
-            android:id="@+id/category_title"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="200dp"
             android:layout_marginTop="@dimen/_16dp"
             android:paddingLeft="@dimen/_32dp"
-            android:paddingBottom="@dimen/_4dp"
             android:paddingTop="@dimen/_8dp"
-            android:text="Услуги"
-            android:textSize="@dimen/_20sp"
-            android:textColor="@color/text_primary_inverse"
             android:background="@color/primary"
-            />
+            >
+
+                <TextView
+                    android:id="@+id/category_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Услуги"
+                    android:textSize="@dimen/_18sp"
+                    android:textColor="@color/text_primary_inverse"
+                    />
+
+        </FrameLayout>
 
         <fragment
             android:id="@+id/song_nav_host_fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/_64dp"
+            android:layout_marginTop="@dimen/_72dp"
             android:name="androidx.navigation.fragment.NavHostFragment"
 
             app:defaultNavHost="true"

@@ -37,8 +37,6 @@ class ServiceListFragment : BaseMainFragment(), ServiceListContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setTitle("Услуги")
-
         /* Init bottom app bar with button */
         bottomBarButton().run {
             hide(object : FloatingActionButton.OnVisibilityChangedListener() {
@@ -63,6 +61,7 @@ class ServiceListFragment : BaseMainFragment(), ServiceListContract.View {
         }
 
         category = arguments?.getSerializable("CATEGORY") as ServiceCategory
+        setTitle(category.title)
 
         /* Init adapter and set up recycler view */
         serviceAdapter = ServiceAdapter()

@@ -34,12 +34,12 @@ data class Service (
 enum class ServiceCategory(
         val title: String
 ) {
-    HAIR("Hair"),
-    MANICURE("Manicure"),
-    PEDICURE("Pedicure"),
-    MAKE_UP("Make up"),
-    MAGIC_WHITE("Magic white"),
-    TOOL_SHARPENING("Tool sharpening")
+    HAIR("Парикмахерские услуги"),
+    MANICURE("Маникюр"),
+    PEDICURE("Педикюр"),
+    MAKE_UP("Макияж"),
+    MAGIC_WHITE("Косметическое отбеливание зубов"),
+    TOOL_SHARPENING("Заточка парикмахерского и маникюрного инструмента")
 }
 
 

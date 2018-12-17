@@ -19,7 +19,7 @@
         android:paddingTop="@dimen/_8dp"
         android:paddingRight="@dimen/_16dp"
         android:paddingLeft="@dimen/_16dp"
-        android:paddingBottom="@dimen/_16dp"
+        android:paddingBottom="@dimen/_80dp"
         android:clipToPadding="false"
         android:background="@android:color/transparent"
 
