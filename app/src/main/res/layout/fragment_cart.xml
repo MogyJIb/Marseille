@@ -15,7 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/_8dp"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingBottom="@dimen/_8dp"
+        android:paddingLeft="@dimen/_8dp"
         android:background="@color/primary"
         >
 
@@ -25,7 +27,7 @@
             android:padding="@dimen/_8dp"
             android:textColor="@color/text_primary_inverse"
             android:textSize="@dimen/_16sp"
-            android:text="Общая стоимость:  "
+            android:text="Общая стоимость: "
             />
 
         <TextView
@@ -47,7 +49,7 @@
             android:layout_height="40dp"
             android:layout_marginRight="@dimen/_16dp"
             android:textSize="@dimen/_10sp"
-            android:text="Купить"
+            android:text="Заказать"
             android:paddingLeft="@dimen/_24dp"
             android:paddingRight="@dimen/_24dp"
 

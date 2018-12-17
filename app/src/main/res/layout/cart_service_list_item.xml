@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textColor="@color/primary"
-        android:textSize="@dimen/_20sp"
+        android:textSize="@dimen/_18sp"
 
         tools:text="Some name"
         />
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_24dp"
         android:textColor="@color/primary"
-        android:textSize="@dimen/_20sp"
+        android:textSize="@dimen/_18sp"
         android:fontFamily="sans-serif-medium"
 
         tools:text="200 $"
